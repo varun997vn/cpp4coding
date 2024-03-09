@@ -3,19 +3,17 @@
 #include <iostream>
 #include "utils.hpp"
 
-using namespace std;
-
 int main()
 {
-    vector<int> v{1, 2, 3, 4, 5, 6, 7, 8};
-    cout << "Numbers: ";
+    std::vector<int> v{1, 2, 3, 4, 5, 6, 7, 8};
+    std::cout << "Numbers: ";
     println(v);
 
-    auto five = find(v.cbegin(), v.cend(), 5);
+    auto five = std::find(v.cbegin(), v.cend(), 5);
     bool found = five != v.cend();
-    cout << "Found: " << found << "\n";
+    std::cout << "Found: " << found << "\n";
     if (found)
-        cout << "Five is at pos: " << std::distance(v.cbegin(), five) << "\n";
+        std::cout << "Five is at pos: " << std::distance(v.cbegin(), five) << "\n";
 
     return 0;
 }

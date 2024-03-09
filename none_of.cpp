@@ -3,11 +3,9 @@
 #include <iostream>
 #include "utils.hpp"
 
-using namespace std;
-
 int main()
 {
-    vector naturalNos{1, 2, 3, 4, 5, 6, 7, 8};
+    std::vector naturalNos{1, 2, 3, 4, 5, 6, 7, 8};
 
     auto isPositive = [](auto e)
     { return e > 0; };
@@ -15,16 +13,16 @@ int main()
     auto isEven = [](auto e)
     { return e % 2 == 0; };
 
-    cout << "Numbers: ";
+    std::cout << "Numbers: ";
     println(naturalNos);
 
-    cout << "Is None Positive: ";
+    std::cout << "Is None Positive: ";
     bool isAnyPositive = none_of(naturalNos.cbegin(), naturalNos.cend(), isPositive);
-    cout << isAnyPositive << "\n";
+    std::cout << isAnyPositive << "\n";
 
-    cout << "Is None Even: ";
+    std::cout << "Is None Even: ";
     bool isNoneEven = none_of(naturalNos.cbegin(), naturalNos.cend(), isEven);
-    cout << isNoneEven << "\n";
+    std::cout << isNoneEven << "\n";
 
     return 0;
 }

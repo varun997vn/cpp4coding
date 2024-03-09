@@ -1,12 +1,10 @@
 #include <vector>
 #include <iostream>
 
-using namespace std;
-
-void println(vector<int> &v)
+void println(std::vector<int> &v)
 {
     for (auto count{v.size()}; auto elem : v)
     {
-        cout << elem << (--count ? ", " : "\n");
+        std::cout << elem << (--count ? ", " : "\n");
     }
 }
