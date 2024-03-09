@@ -15,7 +15,7 @@ int main()
     bool found = five != v.cend();
     cout << "Found: " << found << "\n";
     if (found)
-        cout << "Five is at pos: " << five - v.cbegin() << "\n";
+        cout << "Five is at pos: " << std::distance(v.cbegin(), five) << "\n";
 
     return 0;
 }
